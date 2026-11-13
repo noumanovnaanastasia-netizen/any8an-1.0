@@ -1,0 +1,32 @@
+name: Update VPN Keys
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Скачиваем репозиторий
+        uses: actions/checkout@v4
+
+      - name: Настраиваем Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Запускаем проверку ключей
+        run: python checker.py
+
+      - name: Сохраняем свежий файл sub.txt
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add sub.txt
+          git commit -m "Обновление ключей" || exit 0
+          git push
