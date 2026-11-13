@@ -6,14 +6,14 @@ import re
 from concurrent.futures import ThreadPoolExecutor
 
 NORMAL_URLS = [
-    "https://githubusercontent.com",
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/BLACK_VLESS_RUS_mobile.txt",
     "https://githubusercontent.com",
     "https://githubusercontent.com"
 ]
 
 WHITELIST_URLS = [
     "https://githubusercontent.com",
-    "
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-CIDR-RU-checked.txt",
     "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-CIDR-RU-checked.txt"
 ]
 
