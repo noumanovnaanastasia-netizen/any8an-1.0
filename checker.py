@@ -13,8 +13,8 @@ NORMAL_URLS = [
 
 WHITELIST_URLS = [
     "https://githubusercontent.com",
-    "https://githubusercontent.com",
-    "https://githubusercontent.com"
+    "
+    "https://github.com/igareck/vpn-configs-for-russia/blob/main/WHITE-CIDR-RU-checked.txt"
 ]
 
 def fetch_keys(urls):
